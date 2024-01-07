@@ -1,0 +1,34 @@
+.post {
+  @apply flex;
+  &:nth-child(even) {
+    @apply flex-row-reverse;
+    .content {
+      @apply bg-white;
+    }
+  }
+
+  .content {
+    @apply w-2/5 p-4;
+    @apply bg-slate-100;
+    @apply flex items-center justify-center;
+
+    .title {
+      @apply text-2xl mb-4;
+    }
+    .desc {
+      @apply mb-6;
+    }
+    .link{
+      @apply underline hover:text-green transition;
+    }
+
+    .center {
+      @apply max-w-[350px];
+    }
+
+  }
+
+  .cover {
+    @apply w-3/5
+  }
+}
