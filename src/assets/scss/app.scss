@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./base/typography";
+@import "./base/base";
+
+//Layouts
+@import "layouts/layouts";
