@@ -15,3 +15,26 @@
     }
   }
 }
+
+//Footer
+
+.footer{
+  @apply py-[50px] px-6 grid grid-cols-3 items-end;
+  @apply bg-black text-gray;
+  @apply text-xs;
+
+  .logo{
+    @apply text-2xl font-medium text-white;
+  }
+  .social-icons{
+    @apply flex gap-3 mt-5;
+
+  }
+  .navigation{
+    a{
+      @apply block;
+      @apply pt-2 uppercase hover:text-white;
+      @apply transition
+    }
+  }
+}
