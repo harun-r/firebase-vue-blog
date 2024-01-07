@@ -1,3 +1,17 @@
 .header{
-  @apply bg-blend-color
+  @apply shadow;
+  @apply flex items-center justify-between;
+  @apply px-6 py-4;
+
+
+  .logo{
+    @apply text-2xl font-medium;
+  }
+
+  .navigation{
+    a{
+      @apply text-base ps-5 uppercase hover:text-green;
+      @apply transition
+    }
+  }
 }
