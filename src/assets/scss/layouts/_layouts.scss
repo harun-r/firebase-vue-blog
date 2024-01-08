@@ -1,5 +1,6 @@
 .header{
-  @apply shadow;
+  @apply fixed top-0 left-0 w-full z-10;
+  @apply shadow bg-white;
   @apply flex items-center justify-between;
   @apply px-6 py-4;
 
@@ -14,6 +15,10 @@
       @apply transition
     }
   }
+}
+//page-wrap
+.page-wrap{
+  @apply pt-[64px];
 }
 
 //Footer

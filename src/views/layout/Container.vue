@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-  <div class="" :class="[container, layoutType]">
+  <div class="page-wrap" :class="[container, layoutType]">
     <slot/>
   </div>
 </template>

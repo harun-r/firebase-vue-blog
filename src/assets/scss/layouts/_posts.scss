@@ -23,12 +23,15 @@
     }
 
     .center {
-      @apply max-w-[350px];
+      @apply max-w-[450px];
     }
 
   }
 
   .cover {
-    @apply w-3/5
+    @apply w-3/5 max-h-[600px];
+    img{
+      @apply w-full h-full object-cover
+    }
   }
 }
