@@ -2,15 +2,19 @@
   <container container="home" type="full">
     <blog-post :posts="welcomeScreen"/>
     <blog-post :posts="posts"/>
+    <recent-blog-post/>
+    <updates/>
   </container>
 </template>
 <script>
 import Container from "@/views/layout/Container.vue";
 import BlogPost from "@/components/blogs/blog-post/BlogPost.vue";
+import RecentBlogPost from "@/components/blogs/recent-blog-post/RecentBlogPost.vue";
+import Updates from "@/components/updates/Updates.vue";
 
 export default {
   name: "Home",
-  components: {BlogPost, Container},
+  components: {Updates, RecentBlogPost, BlogPost, Container},
   data() {
     return {
       welcomeScreen: [
