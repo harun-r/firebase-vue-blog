@@ -15,8 +15,27 @@ export default {
   name: "RecentBlogPost",
   components: {BlogCard},
   data() {
-    return{
-      blogPostsCards: []
+    return {
+      blogPostsCards: [
+        {
+          blogID: '1',
+          blogCoverPhoto: 'stock-1',
+          blogTitle: 'Dynamic Page Titles With The Vue Router',
+          blogDate: 'may 1, 2024'
+        },
+        {
+          blogID: '2',
+          blogCoverPhoto: 'stock-2',
+          blogTitle: 'Dynamic Page Titles With The Vue Router',
+          blogDate: 'may 1, 2024'
+        },
+        {
+          blogID: '3',
+          blogCoverPhoto: 'stock-3',
+          blogTitle: 'Dynamic Page Titles With The Vue Router',
+          blogDate: 'may 1, 2024'
+        }
+      ]
     }
   }
 }
