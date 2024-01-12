@@ -7,20 +7,11 @@
       </p>
       <h2>Login to FireBlogs</h2>
       <div class="inputs">
-        <div class="input">
-          <input type="text" placeholder="Email" v-model="email"/>
-          <!--          <email class="icon" />-->
-        </div>
-        <div class="input">
-          <input type="password" placeholder="Password" v-model="password"/>
-          <!--          <password class="icon" />-->
-        </div>
+        <app-input placeholder="Email" v-model="email"/>
+        <app-input placeholder="Password" :type="'password'" v-model="password"/>
         <div v-show="error" class="error">{{ this.errorMsg }}</div>
       </div>
-      <router-link class="forgot-password" :to="{ name: 'ForgotPassword' }"
-      >Forgot your password?
-      </router-link
-      >
+      <router-link class="forgot-password" :to="{ name: 'ForgotPassword' }">Forgot your password?</router-link>
       <button @click.prevent="signIn">Sign In</button>
       <div class="angle"></div>
     </form>
@@ -29,8 +20,11 @@
 </template>
 
 <script>
+import AppInput from "@/components/common/forms/app-input/AppInput.vue";
+
 export default {
   name: "Login",
+  components: {AppInput},
   data() {
     return {
       email: "",
@@ -39,6 +33,11 @@ export default {
       errorMsg: "",
     };
   },
+  methods:{
+    signIn(){
+
+    }
+  }
 }
 </script>
 

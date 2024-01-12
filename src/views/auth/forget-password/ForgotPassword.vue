@@ -1,6 +1,9 @@
 <script>
+import AppInput from "@/components/common/forms/app-input/AppInput.vue";
+
 export default {
   name: "ForgotPassword",
+  components: {AppInput},
   data() {
     return {
       email: "",
@@ -9,6 +12,11 @@ export default {
       loading: null,
     };
   },
+  methods: {
+    resetPassword() {
+
+    }
+  }
 }
 </script>
 
@@ -23,12 +31,11 @@ export default {
           <router-link class="router-link" :to="{ name: 'Login' }">Login</router-link>
         </p>
         <h2>Reset Password</h2>
-        <p>Forgot your passowrd? Enter your email to reset it</p>
+        <p>Forgot your password? Enter your email to reset it</p>
         <div class="inputs">
-          <div class="input">
-            <input type="text" placeholder="Email" v-model="email"/>
-            <email class="icon"/>
-          </div>
+          <app-input
+              placeholder="Email" v-model="email"
+          />
         </div>
         <button @click.prevent="resetPassword">Reset</button>
         <div class="angle"></div>

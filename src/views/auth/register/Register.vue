@@ -7,26 +7,22 @@
       </p>
       <h2>Create Your FireBlog Account</h2>
       <div class="inputs">
-        <div class="input">
-          <input type="text" placeholder="First Name" v-model="firstName"/>
-          <user class="icon"/>
-        </div>
-        <div class="input">
-          <input type="text" placeholder="Last Name" v-model="lastName"/>
-          <user class="icon"/>
-        </div>
-        <div class="input">
-          <input type="text" placeholder="Username" v-model="username"/>
-          <user class="icon"/>
-        </div>
-        <div class="input">
-          <input type="text" placeholder="Email" v-model="email"/>
-          <email class="icon"/>
-        </div>
-        <div class="input">
-          <input type="password" placeholder="Password" v-model="password"/>
-          <password class="icon"/>
-        </div>
+        <app-input
+            placeholder="First Name" v-model="firstName"
+        />
+        <app-input
+            placeholder="Last Name" v-model="lastName"
+        />
+        <app-input
+            placeholder="Username" v-model="username"
+        />
+        <app-input
+            placeholder="Email" v-model="email"
+        />
+        <app-input
+            placeholder="Password" v-model="password" type="password"
+        />
+
         <div v-show="error" class="error">{{ this.errorMsg }}</div>
       </div>
       <button @click.prevent="register">Sign Up</button>
@@ -36,8 +32,11 @@
   </div>
 </template>
 <script>
+import AppInput from "@/components/common/forms/app-input/AppInput.vue";
+
 export default {
   name: "Register",
+  components: {AppInput},
   data() {
     return {
       firstName: "",
@@ -49,6 +48,11 @@ export default {
       errorMsg: "",
     };
   },
+  methods: {
+    register() {
+
+    }
+  }
 }
 </script>
 
