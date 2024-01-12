@@ -21,8 +21,8 @@ export default {
         <app-headings v-if="post.welcomeScreen" :text="post.title"/>
         <app-headings v-else :text="post.title"/>
         <app-desc :text="post.blogPost"/>
-        <router-link :class="'link'" v-if="post.welcomeScreen" :to="{name:'Auth'}">Login/Register</router-link>
-        <router-link :class="'link'" v-else :to="{name:'Auth'}">View the post</router-link>
+        <router-link :class="'link'" v-if="post.welcomeScreen" :to="{name:'Login'}">Login/Register</router-link>
+        <router-link :class="'link'" v-else :to="{name:'Login'}">View the post</router-link>
       </div>
     </div>
     <div class="cover">

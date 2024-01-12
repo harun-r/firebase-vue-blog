@@ -18,7 +18,7 @@ export default {
       navigations: [
         {name: 'Home', route: 'Home'},
         {name: 'Blogs', route: 'Blogs'},
-        {name: 'Login / Register', route: 'Auth'},
+        {name: 'Login / Register', route: 'Login'},
       ]
     }
   }
